@@ -32,7 +32,7 @@ export default function Home() {
 
 function Navbar() {
   return (
-    <div className='w-full text-white h-16 backdrop-filter backdrop-blur-xl bg-opacity-20 border-b flex items-center justify-center'>
+    <div className='w-full text-white h-16 backdrop-filter backdrop-blur-xl bg-opacity-20 flex items-center justify-center'>
       <div className='max-w-7xl w-full flex items-center justify-between p-4'>
         <h6 className='font-bold'>nextbot</h6>
         <ul className='flex gap-8'>
