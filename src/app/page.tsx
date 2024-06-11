@@ -54,7 +54,7 @@ function Footer() {
           <div className="grid md:grid-cols-3 py-5">
             <div className="py-8 px-4">
               <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3">
-                Rumo
+                nextbot
               </h1>
               <p className="text-gray-400 text-left">
                 Subscribe to our{" "}
