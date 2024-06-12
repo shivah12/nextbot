@@ -1,5 +1,7 @@
 import Spline from '@splinetool/react-spline/next';
 import Link from 'next/link';
+import pricingCards from './libs/PricingCards';
+import { CheckCheck } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -27,6 +29,16 @@ export default function Home() {
         </section>
         {/* Services section */}
         <Services />
+        <section id="pricing" className="h-fit text-white min-h-screen w-full flex flex-col items-center justify-center gap-8 p-8">
+          <h4 className="text-4xl text-white md:text-5xl font-bold">Pricing</h4>
+          <div className='grid  text-white grid-cols-1 grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 items-center h-fit w-full max-w-3xl gap-8'>
+            {pricingCards.map((pricingCard) => {
+              return (
+                <PricingCard oneliner={pricingCard.oneliner} title={pricingCard.title} price={pricingCard.price} benefits={pricingCard.benefits} key={pricingCard.id} />
+              )
+            })}
+          </div>
+        </section>
         <Footer />
       </main>
     </div>
@@ -47,6 +59,45 @@ function Navbar() {
       </div>
     </div>
   )
+}
+
+interface IPricingCardProps {
+  title: string;
+  price: number;
+  benefits: string[]
+  oneliner: string;
+}
+function PricingCard({ title, price, benefits, oneliner }: IPricingCardProps) {
+  return (
+    <div className='h-fit w-full rounded flex flex-col p-8 gap-8 bg-gray-900 rounded bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-20 relative'>
+      <div className='flex flex-col gap-2'>
+        <div>
+          <h6 className='text-2xl'>{title}</h6>
+          <p className='text-sm text-zinc-500'>{oneliner}</p>
+        </div>
+        <p className='text-4xl font-bold'>
+          ${price} <span className='text-sm font-normal text-white'>/ Month</span>
+        </p>
+      </div>
+      <button className='bg-black rounded p-2 text-whitetext-sm transition-colors hover:bg-fuchsia-800'>Try 7 days free!</button>
+      <div className='flex flex-col w-full gap-4'>
+        {benefits.map((benefit, i) => (
+          <p key={i} className='text-sm text-zinc-500 flex items-center gap-2'>
+            <span>
+              {/* Assuming CheckCheck is an icon component */}
+              <CheckCheck />
+            </span>
+            {benefit}
+          </p>
+        ))}
+      </div>
+      <div className="absolute inset-0 rounded overflow-hidden">
+        <div className="border-2 border-fuchsia-700 hover:border-white rounded-full absolute" style={{
+          animation: 'rotate 2s linear infinite'
+        }}></div>
+      </div>
+    </div>
+  );
 }
 
 
@@ -135,7 +186,7 @@ function Footer() {
 
 function Services() {
   return (
-    <section id="services" className="min-h-screen flex justify-center items-center bg-black text-white py-4 mx-4 md:mx-8 z-10 relative">
+    <section id="services" className="min-h-screen flex justify-center items-center text-white py-4 mx-4 md:mx-8 z-10 relative">
       <div className="max-w-6xl text-center">
         <h2 className="text-4xl font-bold mb-8">Our Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
