@@ -1,3 +1,4 @@
+
 import Spline from '@splinetool/react-spline/next';
 import Link from 'next/link';
 
@@ -14,8 +15,9 @@ export default function Home() {
           />
         </section>
         {/* About section */}
-        <section id="about" className="min-h-screen flex justify-center items-center bg-black text-white py-8 pb-4 mx-4 md:mx-8">
-          <div className="max-w-4xl text-center">
+        <section id="about" className="relative min-h-screen flex justify-center items-center bg-black text-white py-8 pb-4 mx-4 md:mx-8">
+          <div className="absolute inset-2 bg-cover bg-center blur-lg" style={{ backgroundImage: 'url(/bg.jpeg)' }}></div>
+          <div className="relative max-w-4xl text-center bg-black bg-opacity-50 backdrop-filter backdrop-blur-md p-8 rounded">
             <h2 className="text-4xl font-bold mb-4">About Us</h2>
             <p className="text-lg">
               Welcome to nextbot! We are a cutting-edge technology company dedicated to providing innovative solutions for your business needs. Our team of experts is passionate about developing tools and applications that make your life easier and your work more efficient. Explore our services to learn more about how we can help you achieve your goals.
