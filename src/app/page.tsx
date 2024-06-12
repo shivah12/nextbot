@@ -19,8 +19,8 @@ export default function Home() {
         </section>
         {/* About section */}
         <section id="about" className="relative min-h-screen flex justify-center items-center bg-black text-white py-8 pb-4 mx-4 md:mx-8 z-10">
-          <div className="absolute inset-2 bg-cover bg-center blur-lg" style={{ backgroundImage: 'url(/bg.jpeg)' }}></div>
-          <div className="relative max-w-4xl text-center bg-black bg-opacity-50 backdrop-filter backdrop-blur-md p-8 rounded">
+          <div className="absolute inset-2 left-0 right-0 bg-cover bg-center blur-lg" style={{ backgroundImage: 'url(/bg.jpeg)' }}></div>
+          <div className="relative max-w-4xl text-center bg-black bg-opacity-50 backdrop-filter backdrop-blur-md p-8 rounded mx-4"> {/* Added mx-4 for left and right margin */}
             <h2 className="text-4xl font-bold mb-4">About Us</h2>
             <p className="text-lg">
               Welcome to nextbot! We are a cutting-edge technology company dedicated to providing innovative solutions for your business needs. Our team of experts is passionate about developing tools and applications that make your life easier and your work more efficient. Explore our services to learn more about how we can help you achieve your goals.
@@ -186,23 +186,23 @@ function Footer() {
 
 function Services() {
   return (
-    <section id="services" className="min-h-screen flex justify-center items-center text-white py-4 mx-4 md:mx-8 z-20 relative backdrop-filter backdrop-blur-lg">
+    <section id="services" className="min-h-screen left-0 right-0 w-full flex justify-center items-center text-white py-4 mx-0 md:mx-0 z-20 relative backdrop-filter backdrop-blur-lg">
       <div className="max-w-6xl text-center">
         <h2 className="text-4xl font-bold mb-8">Our Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
-          <div className="rounded-lg bg-black bg-opacity-70 backdrop-filter backdrop-blur-lg border border-white p-8">
+          <div className="rounded-lg bg-black bg-opacity-70 backdrop-filter backdrop-blur-lg border border-white p-8 mx-4"> {/* Added mx-4 for left and right margin */}
             <h3 className="text-3xl font-bold mb-4">Custom Chatbot Development</h3>
             <p className="text-lg">
               We specialize in crafting bespoke chatbot solutions tailored to your business needs. From customer support to lead generation, our chatbots are designed to engage and convert.
             </p>
           </div>
-          <div className="rounded-lg bg-black bg-opacity-70 backdrop-filter backdrop-blur-lg border border-white p-8">
+          <div className="rounded-lg bg-black bg-opacity-70 backdrop-filter backdrop-blur-lg border border-white p-8 mx-4"> {/* Added mx-4 for left and right margin */}
             <h3 className="text-3xl font-bold mb-4">AI-Powered Chatbot Integration</h3>
             <p className="text-lg">
               Harness the power of artificial intelligence with our AI-driven chatbot integration services. Our chatbots learn from interactions, providing personalized experiences for your users.
             </p>
           </div>
-          <div className="rounded-lg bg-black bg-opacity-70 backdrop-filter backdrop-blur-lg border border-white p-8">
+          <div className="rounded-lg bg-black bg-opacity-70 backdrop-filter backdrop-blur-lg border border-white p-8 mx-4"> {/* Added mx-4 for left and right margin */}
             <h3 className="text-3xl font-bold mb-4">Chatbot Consulting and Strategy</h3>
             <p className="text-lg">
               Unsure how to leverage chatbots for your business? Our experts offer comprehensive consulting and strategy services, guiding you through the implementation and optimization process.
