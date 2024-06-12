@@ -1,4 +1,3 @@
-
 import Spline from '@splinetool/react-spline/next';
 import Link from 'next/link';
 
@@ -9,13 +8,15 @@ export default function Home() {
       <main className="bg-black">
         <Navbar />
         {/* Spline model section */}
-        <section id="home" className="h-screen flex justify-center items-center bg-black text-white">
+        <section id="home" className="h-screen flex justify-center items-center bg-black text-white relative">
           <Spline
             scene="https://prod.spline.design/IXTSbGyJCKPpuQVy/scene.splinecode"
+            className="fixed top-0 left-0 w-full h-full z-5"
           />
+          <Jumbotron />
         </section>
         {/* About section */}
-        <section id="about" className="relative min-h-screen flex justify-center items-center bg-black text-white py-8 pb-4 mx-4 md:mx-8">
+        <section id="about" className="relative min-h-screen flex justify-center items-center bg-black text-white py-8 pb-4 mx-4 md:mx-8 z-10">
           <div className="absolute inset-2 bg-cover bg-center blur-lg" style={{ backgroundImage: 'url(/bg.jpeg)' }}></div>
           <div className="relative max-w-4xl text-center bg-black bg-opacity-50 backdrop-filter backdrop-blur-md p-8 rounded">
             <h2 className="text-4xl font-bold mb-4">About Us</h2>
@@ -34,23 +35,37 @@ export default function Home() {
 
 function Navbar() {
   return (
-    <div className='w-full text-white h-16 backdrop-filter backdrop-blur-xl bg-opacity-20 flex items-center justify-center'>
+    <div className='w-full text-white h-16 backdrop-filter backdrop-blur-xl bg-opacity-20 flex items-center justify-center z-30 relative'>
       <div className='max-w-7xl w-full flex items-center justify-between p-4'>
         <h6 className='font-bold'>nextbot</h6>
         <ul className='flex gap-8'>
-          <li><Link className='hover:text-fuchsia-500 transition-colors text-xs sm:text-base' href="#home">Home</Link></li>
-          <li><Link className='hover:text-fuchsia-500 transition-colors text-xs sm:text-base' href="#about">About</Link></li>
-          <li><Link className='hover:text-fuchsia-500 transition-colors text-xs sm:text-base' href="#pricing">Pricing</Link></li>
-          <li><Link className='hover:text-fuchsia-500 transition-colors text-xs sm:text-base' href="#pricing">Contact Us</Link></li>
+          <li><Link className='hover:text-fuchsia-300 transition-colors text-xs sm:text-base' href="#home">Home</Link></li>
+          <li><Link className='hover:text-fuchsia-300 transition-colors text-xs sm:text-base' href="#about">About</Link></li>
+          <li><Link className='hover:text-fuchsia-300 transition-colors text-xs sm:text-base' href="#pricing">Pricing</Link></li>
+          <li><Link className='hover:text-fuchsia-300 transition-colors text-xs sm:text-base' href="#pricing">Contact Us</Link></li>
         </ul>
       </div>
     </div>
   )
 }
 
+
+function Jumbotron() {
+  return (
+    <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white py-8 px-4 z-20 backdrop-filter backdrop-blur-lg">
+      <div className="max-w-4xl mx-auto text-center">
+        <h1 className="text-5xl font-bold mb-4">Welcome to Nextbot</h1>
+        <p className="text-xl">
+          Your one-stop solution for all technological advancements.
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function Footer() {
   return (
-    <footer className="bg-white-900 text-white w-full py-4 text-center">
+    <footer className="bg-white-900 text-white w-full py-4 text-center z-10 relative">
       <div className="bg-primary">
         <section className="max-w-[1400px] mx-auto text-white">
           <div className="grid md:grid-cols-3 py-5">
@@ -93,8 +108,8 @@ function Footer() {
                     Links
                   </h1>
                   <ul className="flex flex-col gap-3 ">
-                    <li className="cursor-pointer text-left hover:text-fuchsia-500">Home</li>
-                    <li className="cursor-pointer text-left hover:text-fuchsia-500">About</li>
+                    <li className="cursor-pointer text-left hover:text-fuchsia-300">Home</li>
+                    <li className="cursor-pointer text-left hover:text-fuchsia-300">About</li>
                   </ul>
                 </div>
               </div>
@@ -104,8 +119,8 @@ function Footer() {
                     More Links
                   </h1>
                   <ul className="flex flex-col gap-3 ">
-                    <li className="cursor-pointer text-left hover:text-fuchsia-500">Privacy</li>
-                    <li className="cursor-pointer text-left hover:text-fuchsia-500">Terms & Conditions</li>
+                    <li className="cursor-pointer text-left hover:text-fuchsia-300">Privacy</li>
+                    <li className="cursor-pointer text-left hover:text-fuchsia-300">Terms & Conditions</li>
                   </ul>
                 </div>
               </div>
@@ -120,10 +135,10 @@ function Footer() {
 
 function Services() {
   return (
-    <section id="services" className="min-h-screen flex justify-center items-center bg-black text-white py-4 mx-4 md:mx-8">
+    <section id="services" className="min-h-screen flex justify-center items-center bg-black text-white py-4 mx-4 md:mx-8 z-10 relative">
       <div className="max-w-6xl text-center">
         <h2 className="text-4xl font-bold mb-8">Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
           <div className="rounded-lg bg-gray-800 p-6">
             <h3 className="text-2xl font-bold mb-4">Service 1</h3>
             <p className="text-lg">
@@ -147,3 +162,4 @@ function Services() {
     </section>
   );
 }
+
