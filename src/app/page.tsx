@@ -19,7 +19,7 @@ export default function Home() {
         </section>
         {/* About section */}
         <section id="about" className="relative min-h-screen flex justify-center items-center bg-black text-white py-8 pb-4 mx-4 md:mx-8 z-10">
-          <div className="absolute inset-2 left-0 right-0 bg-cover bg-center blur-lg" style={{ backgroundImage: 'url(/bg.jpeg)' }}></div>
+        <div className="absolute inset-2 left-0 right-0  bg-cover bg-center blur-lg" style={{ backgroundImage: 'url(/bg.jpeg)' , marginLeft: '0px', marginRight: '0px'}}></div>
           <div className="relative max-w-4xl text-center bg-black bg-opacity-50 backdrop-filter backdrop-blur-md p-8 rounded mx-4"> {/* Added mx-4 for left and right margin */}
             <h2 className="text-4xl font-bold mb-4">About Us</h2>
             <p className="text-lg">
