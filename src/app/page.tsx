@@ -190,22 +190,22 @@ function Services() {
       <div className="max-w-6xl text-center">
         <h2 className="text-4xl font-bold mb-8">Our Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
-          <div className="rounded-lg bg-gray-800 p-6">
-            <h3 className="text-2xl font-bold mb-4">Service 1</h3>
-            <p className="text-lg">
-              Description of Service 1. This service provides...
+          <div className="rounded-lg bg-black bg-opacity-70 backdrop-filter backdrop-blur-lg border border-white p-8">
+            <h3 className="text-2xl font-bold mb-4">Custom Chatbot Development</h3>
+            <p className="text-base">
+              We specialize in crafting bespoke chatbot solutions tailored to your business needs. From customer support to lead generation, our chatbots are designed to engage and convert.
             </p>
           </div>
-          <div className="rounded-lg bg-gray-800 p-6">
-            <h3 className="text-2xl font-bold mb-4">Service 2</h3>
-            <p className="text-lg">
-              Description of Service 2. This service helps with...
+          <div className="rounded-lg bg-black bg-opacity-70 backdrop-filter backdrop-blur-lg border border-white p-8">
+            <h3 className="text-2xl font-bold mb-4">AI-Powered Chatbot Integration</h3>
+            <p className="text-base">
+              Harness the power of artificial intelligence with our AI-driven chatbot integration services. Our chatbots learn from interactions, providing personalized experiences for your users.
             </p>
           </div>
-          <div className="rounded-lg bg-gray-800 p-6">
-            <h3 className="text-2xl font-bold mb-4">Service 3</h3>
-            <p className="text-lg">
-              Description of Service 3. This service offers...
+          <div className="rounded-lg bg-black bg-opacity-70 backdrop-filter backdrop-blur-lg border border-white p-8">
+            <h3 className="text-2xl font-bold mb-4">Chatbot Consulting and Strategy</h3>
+            <p className="text-base">
+              Unsure how to leverage chatbots for your business? Our experts offer comprehensive consulting and strategy services, guiding you through the implementation and optimization process.
             </p>
           </div>
         </div>
@@ -213,4 +213,3 @@ function Services() {
     </section>
   );
 }
-
